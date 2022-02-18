@@ -1,0 +1,125 @@
+---
+name: Andrew
+surname: McInerney
+position: "Ph.D. Student"
+address: "Department of Mathematics and Statistics, University of Limerick"
+phone: +353 87 640 4349
+www: andrewmcinerney.netlify.app/
+email: "andrew.mcinerney@ul.ie"
+twitter: amcinerney_
+github: andrew-mcinerney
+linkedin: andrewjmcinerney
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv:
+    page_total: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+```
+
+# Employment
+
+```{r}
+tribble(
+  ~ Title, ~ Year, ~ Company, ~ Where, ~ Why,
+  "eModerator - Professional Diploma in Data Analytics", "January 2022 - Present", "University of Limerick", "Limerick, Ireland",   
+ "Monitored forums and hosted weekly question-and-answer sessions for students in online modules titled `Data Analytics with R' and `Introduction to Predictive Analytics'.",
+ 
+ "eModerator - Professional Diploma in Data Analytics", "January 2022 - Present", "University of Limerick", "Limerick, Ireland",   
+ "Prepared tutorial and computer-laboratory sheets for `Introduction to Predictive Analytics'.",
+ 
+ "Tutor - Department of Mathematics and Statistics", "2020 - Present", "", "",  "Tutored undergraduate and postgraduate students in the following modules: Advanced Data Analysis, Applied Business Statistics, Applied Data Analysis, Statistics for Data Analytics, Stochastic Processes.",
+ 
+ "Tutor - Department of Mathematics and Statistics", "2020 - Present", "", "",
+ "Graded undergraduate and postgraduate assignments in addition to final examinations.",
+
+
+ "Data Sciene Intern", "June 2021 - September 2021", "Hertz", "Dublin, Ireland", 
+ "Performed cluster analysis on customer and rental data to provide meaningful customer segments for the Marketing team.",
+ 
+ 
+ "Data Analytics Intern", "January 2019 - August 2019", "Regeneron Pharmaceuticals", "Limerick, Ireland",
+ "Undertook an eight-month internship within the Process Monitoring and Data Analytics team.",
+ 
+ "Data Analytics Intern", "January 2019 - August 2019", "Regeneron Pharmaceuticals", "Limerick, Ireland",
+ "Main responsibilities included carrying out ad hoc statistical analyses (e.g., t-tests and ANOVA), statistical process control (SPC), and design of experiments (DOE)."
+	              
+) %>% 
+  detailed_entries(Title, Year, Company, Where, Why, .protect = T)
+```
+
+
+# Education
+
+```{r}
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
+  "PhD~in Statistics (SFI Centre for Research Training in Foundations of Data Science)", "2020 - Present", "University of Limerick", "Dublin, Ireland",
+  "Title: `A Statistical Approach to Neural Networks' (Supervisor: Dr.~Kevin Burke).",
+  "PhD~in Statistics (SFI Centre for Research Training in Foundations of Data Science)", "2020 - Present", "University of Limerick", "Dublin, Ireland",
+  "Developed likelihood-based model selection methods for feedforward neural networks.",
+  "BSc~in Mathematical Sciences (First Class Honours)", "2016 - 2020", "University of Limerick", "Limerick, Ireland", NA
+  
+) %>% 
+  detailed_entries(Degree, Year, Institution, why = Why)
+```
+
+
+# Technical Skills
+
+## Programming
+\vspace{-0.2cm}  
+- 6 years experience with R:  
+    - Developed R package during PhD. 
+    - Taught R to undergraduate and postgraduate students.
+- Proficient in: SPSS, JMP, \LaTeX.
+- Familiar with: AWS, Git, Python, SQL, Tableau.
+
+
+# Presentations
+
+## Invited
+
+```{r invited pres}
+tribble(
+  ~ when, ~ title, ~ details, ~ where, ~ url,
+  "2021", "Information-criteria-based Model Selection for Neural Networks,", 
+  "Invited Speaker",  " The Royal Statistical Society International Conference 2021 (RSS)", NA
+) %>%
+  brief_entries(glue::glue("\\href{<url>}{\\textbf{<title>}} <where>", .open = "<", .close = ">"), when, 
+                .protect = FALSE)
+```
+
+## Selected Others
+
+```{r presentaions}
+tribble(
+  ~ when, ~ title, ~ details, ~ where, ~ url,
+  "2021", "Information-criteria-based Model Selection for Neural Networks", 
+  "Contributed Presentation",  "The 44th Research Students' Conference in Probability and Statistics (RSC 2021)",
+  NA,
+  
+  "2021", "Information-criteria-based Model Selection for Neural Networks", 
+  "Contributed Presentation",  "The 4th International Conference on Econometrics and Statistics (EcoSta 2021)",
+  NA,
+) %>%
+  brief_entries(glue::glue("\\href{<url>}{\\textbf{<title>}}, <where>", .open = "<", .close = ">"), when, .protect = FALSE)
+```
+
+# Awards
+
+```{r awards}
+tribble(
+  ~ when, ~ what,
+  "2021", "RSC 2021 - `Best Long Talk'",
+) %>%
+  brief_entries(glue::glue("<what>", .open = "<", .close = ">"), when, .protect = FALSE)
+```
+
+
+
+
