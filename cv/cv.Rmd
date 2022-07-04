@@ -3,16 +3,15 @@ name: Andrew
 surname: McInerney
 position: "Ph.D. Student"
 address: "Department of Mathematics and Statistics, University of Limerick"
-phone: +353 87 640 4349
-www: andrewmcinerney.netlify.app/
+www: andrewmcinerney.netlify.app
 email: "andrew.mcinerney@ul.ie"
 twitter: amcinerney_
 github: andrew-mcinerney
 linkedin: andrewjmcinerney
 date: "`r format(Sys.time(), '%B %Y')`"
+fontsize: 11pt
 output: 
-  vitae::awesomecv:
-    page_total: true
+  vitae::awesomecv
 ---
 
 ```{r setup, include=FALSE}
@@ -32,9 +31,9 @@ tribble(
  "eModerator - Professional Diploma in Data Analytics", "January 2022 - Present", "University of Limerick", "Limerick, Ireland",   
  "Prepared tutorial and computer-laboratory sheets for `Introduction to Predictive Analytics'.",
  
- "Tutor - Department of Mathematics and Statistics", "2020 - Present", "", "",  "Tutored undergraduate and postgraduate students in the following modules: Advanced Data Analysis, Applied Business Statistics, Applied Data Analysis, Statistics for Data Analytics, Stochastic Processes.",
+ "Tutor - Department of Mathematics and Statistics", "September 2020 - Present", "", "",  "Tutored undergraduate and postgraduate students in the following modules: Advanced Data Analysis, Applied Business Statistics, Applied Data Analysis, Statistics for Data Analytics, Stochastic Processes.",
  
- "Tutor - Department of Mathematics and Statistics", "2020 - Present", "", "",
+ "Tutor - Department of Mathematics and Statistics", "September 2020 - Present", "", "",
  "Graded undergraduate and postgraduate assignments in addition to final examinations.",
 
 
@@ -72,9 +71,9 @@ tribble(
 # Technical Skills
 
 ## Programming
-\vspace{-0.2cm}  
-- 6 years experience with R:  
-    - Developed R package during PhD. 
+\vspace{-0.2cm}
+- 6 years experience with R:
+    - Developed R package during PhD.
     - Taught R to undergraduate and postgraduate students.
 - Proficient in: SPSS, JMP, \LaTeX.
 - Familiar with: AWS, Git, Python, SQL, Tableau.
@@ -86,29 +85,35 @@ tribble(
 
 ```{r invited pres}
 tribble(
-  ~ when, ~ title, ~ details, ~ where, ~ url,
-  "2021", "Information-criteria-based Model Selection for Neural Networks,", 
-  "Invited Speaker",  " The Royal Statistical Society International Conference 2021 (RSS)", NA
+  ~ when, ~ title, ~ details, ~ where, 
+  "2022", "Variable and Architecture Selection in Neural Networks", 
+  "Invited Speaker",  "The 5th International Conference on Econometrics and Statistics (EcoSta 2022)",
+  
+  "2021", "Information-criteria-based Model Selection for Neural Networks", 
+  "Invited Speaker",  "The Royal Statistical Society International Conference 2021 (RSS)",
 ) %>%
-  brief_entries(glue::glue("\\href{<url>}{\\textbf{<title>}} <where>", .open = "<", .close = ">"), when, 
-                .protect = FALSE)
+  brief_entries(glue::glue("\\textbf{<title>}, <where>", .open = "<", .close = ">"), when, .protect = FALSE)
 ```
 
-## Selected Others
+\newpage
+
+## Contributed
 
 ```{r presentaions}
 tribble(
-  ~ when, ~ title, ~ details, ~ where, ~ url,
+  ~ when, ~ title, ~ details, ~ where, 
+  "2022", "A Statistical Approach to Neural Network Model Selection", 
+  "Contributed Presentation",  "The 42nd Conference on Applied Statistics in Ireland (CASI 2022)",
+  
   "2021", "Information-criteria-based Model Selection for Neural Networks", 
   "Contributed Presentation",  "The 44th Research Students' Conference in Probability and Statistics (RSC 2021)",
-  NA,
   
   "2021", "Information-criteria-based Model Selection for Neural Networks", 
   "Contributed Presentation",  "The 4th International Conference on Econometrics and Statistics (EcoSta 2021)",
-  NA,
 ) %>%
-  brief_entries(glue::glue("\\href{<url>}{\\textbf{<title>}}, <where>", .open = "<", .close = ">"), when, .protect = FALSE)
+  brief_entries(glue::glue("{\\textbf{<title>}}, <where>", .open = "<", .close = ">"), when, .protect = FALSE)
 ```
+
 
 # Awards
 
@@ -120,6 +125,18 @@ tribble(
   brief_entries(glue::glue("<what>", .open = "<", .close = ">"), when, .protect = FALSE)
 ```
 
+# Volunteering
 
-
+```{r}
+tribble(
+  ~ Title, ~ Year, ~ Company, ~ Where, ~ Why,
+  "Treasurer", "September 2021 - Present", "UL SIAM Student Chapter (Society for Industrial and Applied Mathematics)", "Limerick, Ireland",   
+ "Secured funding for the chapter from Analog Devices.",
+ 
+ "Treasurer", "September 2021 - Present", "UL SIAM Student Chapter (Society for Industrial and Applied Mathematics)", "Limerick, Ireland",   
+ "Organised the 8th Annual Irish SIAM Student Conference."
+ 
+) %>% 
+  detailed_entries(Title, Year, Company, Where, Why, .protect = T)
+```
 
