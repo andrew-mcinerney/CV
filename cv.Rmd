@@ -58,8 +58,6 @@ tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
   "PhD~in Statistics (SFI Centre for Research Training in Foundations of Data Science)", "2020 - Present", "University of Limerick", "Dublin, Ireland",
   "Title: `A Statistical Approach to Neural Networks' (Supervisor: Dr.~Kevin Burke).",
-  "PhD~in Statistics (SFI Centre for Research Training in Foundations of Data Science)", "2020 - Present", "University of Limerick", "Dublin, Ireland",
-  "Developed likelihood-based model selection methods for feedforward neural networks.",
   "BSc~in Mathematical Sciences (First Class Honours)", "2016 - 2020", "University of Limerick", "Limerick, Ireland", NA
   
 ) %>% 
@@ -67,15 +65,28 @@ tribble(
 ```
 
 
-# Technical Skills
+<!-- # Technical Skills -->
 
-## Programming
-\vspace{-0.2cm}
-- 6 years experience with R:
-    - Developed R package during PhD.
-    - Taught R to undergraduate and postgraduate students.
-- Proficient in: SPSS, JMP, \LaTeX.
-- Familiar with: AWS, Git, Python, SQL, Tableau.
+<!-- ## Programming -->
+<!-- \vspace{-0.2cm} -->
+<!-- - 6 years experience with R: -->
+<!--     - Developed R package during PhD. -->
+<!--     - Taught R to undergraduate and postgraduate students. -->
+<!-- - Proficient in: SPSS, JMP, \LaTeX. -->
+<!-- - Familiar with: AWS, Git, Python, SQL, Tableau. -->
+
+# Publications
+
+## Preprints
+
+```{r preprints}
+tribble(
+  ~ when, ~ title, ~ details, ~ where, ~ url,
+  "2022", "A Statistically-Based Approach to Feedforward Neural Network Model Selection", 
+  "\\textbf{McInerney, A.}, Burke, K.",  "arXiv preprint", "https://arxiv.org/abs/2207.04248",
+) %>%
+  brief_entries(glue::glue("<details>, \\href{<url>}{\\textbf{<title>}} (\\textit{<where>})", .open = "<", .close = ">"), when, .protect = FALSE)
+```
 
 
 # Presentations
